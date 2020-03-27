@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+		<action name="GoHomeAction" class="com.internousdev.ecsite.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="HomeAction" class="com.internousdev.ecsite.action.HomeAction" method="execute">
+			<result name="login">login.jsp</result>
+			<result name="success">menu.jsp</result>
+		</action>
+
+		<action name="LoginAction" class="com.internousdev.ecsite.action.LoginAction" method="execute">
+			<result name="success">menu.jsp</result>
+			<result name="kanrisya">admin.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="MenuListAction" class="com.internousdev.ecsite.action.MenuListAction" method="execute">
+			<result name="success">buyItem.jsp</result>
+		</action>
+
+		<action name="ItemSearchAction" class="com.internousdev.ecsite.action.ItemSearchAction" method="execute">
+			<result name="success">itemSearch.jsp</result>
+		</action>
+
+		<action name="ItemSearchCompleteAction" class="com.internousdev.ecsite.action.ItemSearchCompleteAction" method="execute">
+			<result name="success">itemSearchComplete.jsp</result>
+		</action>
+
+		<action name="AdminLoginAction" class="com.internousdev.ecsite.action.AdminLoginAction" method="execute">
+			<result name="kanrisya">admin.jsp</result>
+			<result name="error">adminLogin.jsp</result>
+		</action>
+
+		<action name="HomeAdminAction" class="com.internousdev.ecsite.action.HomeAdminAction" method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">adminLogin.jsp</result>
+		</action>
+
+		<action name="UserCreateAction" class="com.internousdev.ecsite.action.UserCreateAction" method="execute">
+			<result name="success">userCreate.jsp</result>
+		</action>
+
+		<action name="UserCreateConfirmAction" class="com.internousdev.ecsite.action.UserCreateConfirmAction" method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<action name="UserCreateCompleteAction" class="com.internousdev.ecsite.action.UserCreateCompleteAction" method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<action name="BuyItemAction" class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+		<action name="BuyItemConfirmAction" class="com.internousdev.ecsite.action.BuyItemConfirmAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+			<result name="error">itemSearchComplete.jsp</result>
+		</action>
+
+		<action name="MyPageAction" class="com.internousdev.ecsite.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+			<result name="error">home.jsp</result>
+		</action>
+
+		<action name="MyPageEditLoginAction" class="com.internousdev.ecsite.action.MyPageEditLoginAction" method="execute">
+			<result name="success">myPageEditLogin.jsp</result>
+		</action>
+
+		<action name="MyPageEditAction" class="com.internousdev.ecsite.action.MyPageEditAction" method="execute">
+			<result name="success">myPageEdit.jsp</result>
+			<result name="error">myPageEditLogin.jsp</result>
+		</action>
+
+		<action name="MyPageEditConfirmAction" class="com.internousdev.ecsite.action.MyPageEditConfirmAction" method="execute">
+			<result name="success">myPageEditConfirm.jsp</result>
+			<result name="error">myPageEdit.jsp</result>
+		</action>
+
+		<action name="MyPageEditCompleteAction" class="com.internousdev.ecsite.action.MyPageEditCompleteAction" method="execute">
+			<result name="success">myPageEditComplete.jsp</result>
+			<result name="error">myPageEdit.jsp</result>
+		</action>
+
+		<action name="LogoutAction" class="com.internousdev.ecsite.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="AdminAction" class="com.internousdev.ecsite.action.AdminAction" method="execute">
+			<result name="success">admin.jsp</result>
+		</action>
+
+		<action name="ItemCreateAction" class="com.internousdev.ecsite.action.ItemCreateAction" method="execute">
+			<result name="success">itemCreate.jsp</result>
+		</action>
+
+		<action name="ItemCreateConfirmAction" class="com.internousdev.ecsite.action.ItemCreateConfirmAction" method="execute">
+			<result name="success">itemCreateConfirm.jsp</result>
+			<result name="error">itemCreate.jsp</result>
+		</action>
+
+		<action name="ItemCreateCompleteAction" class="com.internousdev.ecsite.action.ItemCreateCompleteAction" method="execute">
+			<result name="success">itemCreateComplete.jsp</result>
+		</action>
+
+		<action name="ItemListAction" class="com.internousdev.ecsite.action.ItemListAction" method="execute">
+			<result name="success">itemList.jsp</result>
+		</action>
+
+		<action name="UserListAction" class="com.internousdev.ecsite.action.UserListAction" method="execute">
+			<result name="success">userList.jsp</result>
+		</action>
+
+		<action name="ItemListDeleteConfirmAction" class="com.internousdev.ecsite.action.ItemListDeleteConfirmAction" method="execute">
+			<result name="success">itemListDeleteConfirm.jsp</result>
+			<result name="error">itemDetailDeleteConfirm.jsp</result>
+		</action>
+
+		<action name="ItemListDeleteCompleteAction" class="com.internousdev.ecsite.action.ItemListDeleteCompleteAction" method="execute">
+			<result name="success">itemListDeleteComplete.jsp</result>
+		</action>
+
+		<action name="UserListDeleteConfirmAction" class="com.internousdev.ecsite.action.UserListDeleteConfirmAction" method="execute">
+			<result name="success">userListDeleteConfirm.jsp</result>
+			<result name="error">userDetailDeleteConfirm.jsp</result>
+		</action>
+
+		<action name="UserListDeleteCompleteAction" class="com.internousdev.ecsite.action.UserListDeleteCompleteAction" method="execute">
+			<result name="success">userListDeleteComplete.jsp</result>
+		</action>
+
+		<action name="ItemDetailAction" class="com.internousdev.ecsite.action.ItemDetailAction" method="execute">
+			<result name="success">itemDetail.jsp</result>
+		</action>
+
+		<action name="UserDetailAction" class="com.internousdev.ecsite.action.UserDetailAction" method="execute">
+			<result name="success">userDetail.jsp</result>
+		</action>
+
+		<action name="StockAddAction" class="com.internousdev.ecsite.action.StockAddAction" method="execute">
+			<result name="success">stockAdd.jsp</result>
+		</action>
+
+		<action name="StockAddConfirmAction" class="com.internousdev.ecsite.action.StockAddConfirmAction" method="execute">
+			<result name="success">stockAddConfirm.jsp</result>
+			<result name="error">stockAdd.jsp</result>
+		</action>
+
+		<action name="StockAddCompleteAction" class="com.internousdev.ecsite.action.StockAddCompleteAction" method="execute">
+			<result name="success">stockAddComplete.jsp</result>
+		</action>
+
+		<action name="SortAction" class="com.internousdev.ecsite.action.SortAction" method="execute">
+			<result name="success">itemSearchComplete.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>
